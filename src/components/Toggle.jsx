@@ -16,7 +16,7 @@ function Toggle() {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div>
       <h1 className={styles.title}>toggle</h1>
 
       <div className={styles.toggleWrapper}>
