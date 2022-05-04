@@ -1,0 +1,55 @@
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+@use '/src/styles/constants/colors';
+
+.title {
+  margin-bottom: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.toggleWrapper {
+  @include flexbox.flexbox;
+  position: relative;
+  padding: 0 5px;
+  background-color: #e7e5e4;
+  border-radius: 20px;
+}
+
+.leftToggle {
+  z-index: 10;
+  width: 160px;
+  padding: 10px 60px;
+}
+
+.rightToggle {
+  z-index: 10;
+  width: 160px;
+  padding: 10px 60px;
+}
+
+.textToggle {
+  font-weight: bold;
+  color: colors.$TEXT_PRIMARY;
+}
+
+.textOnToggle {
+  color: colors.$TEXT_SECONDARY;
+}
+
+.bgToggle {
+  @include position.absolute(50% auto auto 50%);
+  width: 160px;
+  height: 75%;
+  background-color: #f5f5f4;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.bgLeftToggle {
+  transform: translate(-100%, -50%);
+}
+
+.bgRightToggle {
+  transform: translate(0, -50%);
+}
