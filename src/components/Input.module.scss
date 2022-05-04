@@ -1,0 +1,131 @@
+@use '/src/styles/mixins/position';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/constants/colors';
+
+.title {
+  margin-bottom: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+
+.emailInputWrapper {
+  @include flexbox.flexbox(left);
+  flex-direction: column;
+  gap: 5px;
+
+  label {
+    width: 100%;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .emailInput {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    input {
+      width: 100%;
+      padding: 10px 0 10px 5px;
+      background-color: #f5f5f4;
+      border-radius: 5px;
+
+      &:focus {
+        outline: 2px solid #a8a29e;
+      }
+    }
+
+    .emailIcon {
+      @include flexbox.flexbox;
+      @include position.absolute(auto 8px auto auto);
+      height: 100%;
+
+      .checkCircle {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: #57534e;
+        stroke-width: 1.5px;
+      }
+
+      .successEmailCheckCircle {
+        stroke: #2dd4bf;
+      }
+    }
+  }
+
+  .emailErrorText {
+    width: 100%;
+    font-size: small;
+    color: colors.$RED;
+    text-align: left;
+  }
+}
+
+.passwordInputWrapper {
+  @include flexbox.flexbox(left);
+  flex-direction: column;
+  gap: 5px;
+
+  label {
+    width: 100%;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .passwordInput {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    input {
+      width: 100%;
+      padding: 10px 0 10px 5px;
+      background-color: #f5f5f4;
+      border-radius: 5px;
+
+      &:focus {
+        outline: 2px solid #a8a29e;
+      }
+    }
+
+    .passwordIcon {
+      @include flexbox.flexbox;
+      @include position.absolute(auto 8px auto auto);
+      height: 100%;
+
+      .eyeOff {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: #57534e;
+        stroke-width: 1.5px;
+
+        &:hover {
+          cursor: pointer;
+          stroke: #44403c;
+        }
+      }
+
+      .eye {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: #2dd4bf;
+        stroke-width: 1.5px;
+
+        &:hover {
+          cursor: pointer;
+          stroke: #14b8a6;
+        }
+      }
+    }
+  }
+}
