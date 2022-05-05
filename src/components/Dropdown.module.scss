@@ -1,0 +1,74 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/position';
+
+.title {
+  margin-bottom: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.dropdownWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+
+  .dropdownMain {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f4;
+    border-radius: 5px;
+
+    .dropdownResultText {
+      font-size: larger;
+      font-weight: 500;
+      color: colors.$TEXT_SECONDARY;
+    }
+
+    .downArrowIcon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .dropdownSearchWrapper {
+    background-color: #f5f5f4;
+    border: 0.5px solid #d6d3d1;
+    border-radius: 5px;
+
+    .dropdownSearch {
+      position: relative;
+
+      .dropdownInput {
+        width: 100%;
+        padding: 10px 20px 10px 35px;
+      }
+
+      .searchIcon {
+        @include position.posCenterY;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .dropdownList {
+      width: 100%;
+      border-top: 0.5px solid #d6d3d1;
+
+      button {
+        width: 100%;
+        padding: 8px 10px;
+        color: colors.$TEXT_PRIMARY;
+        text-align: left;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #d6d3d1;
+        }
+      }
+    }
+  }
+}
