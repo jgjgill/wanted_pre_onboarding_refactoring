@@ -18,7 +18,8 @@ function Dropdown() {
   const [inputValue, setInputValue] = useState()
   
   const handleClickDropDown = () => {
-    setDropdownToggle(prev => !prev)
+      setDropdownToggle(prev => !prev)
+    return null
   }
 
   const handleChangeInput = (e) => {
@@ -37,6 +38,7 @@ function Dropdown() {
     setInputValue()
   }
 
+  const dropdownBarRef = useRef()
   const dropdownRef = useRef()
 
   useEffect(() => {
@@ -49,21 +51,22 @@ function Dropdown() {
 
   useEffect(() => {
     function handleClickOut(e) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target))
-      setDropdownToggle((prev) => !prev)
+      if (dropdownRef.current && !dropdownBarRef.current.contains(e.target) && !dropdownRef.current.contains(e.target))
+      setDropdownToggle(false)
     }
+    
     document.addEventListener('mousedown', handleClickOut)
 
     return () =>document.removeEventListener('mousedown', handleClickOut)
 
-  }, [dropdownRef])
+  }, [dropdownRef, dropdownBarRef])
 
   return (
     <div>
       <h1 className={styles.title}>Dropdown</h1>
 
       <div className={styles.dropdownWrapper}>
-        <button type='button' className={styles.dropdownMain} onClick={handleClickDropDown}>
+        <button type='button' ref={dropdownBarRef} className={styles.dropdownMain} onClick={handleClickDropDown}>
           <span className={styles.dropdownResultText}>{dropdownValue}</span>
           <ChevronDownImage className={styles.downArrowIcon} />
         </button>

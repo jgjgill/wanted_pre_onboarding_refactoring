@@ -1,0 +1,111 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/position';
+
+.title {
+  margin-bottom: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.slierWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+}
+
+.sliderInputWrapper {
+  position: relative;
+  display: flex;
+
+  .sliderInput {
+    width: 100%;
+    padding: 10px 25px;
+    font-weight: 600;
+    color: colors.$TEXT_SECONDARY;
+    text-align: right;
+    background-color: #e7e5e4;
+    border-radius: 5px;
+  }
+
+  .inputPercent {
+    position: absolute;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: colors.$TEXT_PRIMARY;
+  }
+}
+
+.sliderRangeWrapper {
+  position: relative;
+
+  .sliderRange {
+    z-index: 10;
+    width: 100%;
+    height: 10px;
+    background-color: none;
+    border-radius: 10px;
+
+    &::-webkit-slider-thumb {
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      background: #2dd4bf;
+      border-radius: 10px;
+      outline: 4px solid #f5f5f4;
+      -webkit-appearance: none;
+    }
+  }
+
+  .sliderBackground {
+    @include position.middleBox;
+    z-index: -100;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #2dd4bf 0%, #2dd4bf var(--slider), #e7e5e4 var(--slider), #e7e5e4 100%);
+    border-radius: 10px;
+  }
+
+  .circleContainer {
+    @include position.middleBox;
+    z-index: -100;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10px;
+
+    .sliderCircle {
+      width: 15px;
+      height: 15px;
+      background-color: #e7e5e4;
+      border-radius: 10px;
+      transform: translateY(-2px);
+    }
+
+    .onCircleColor {
+      background-color: #2dd4bf;
+    }
+  }
+}
+
+.sliderOptionList {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .sliderOption {
+    padding: 3px 10px;
+    font-size: xx-small;
+    color: colors.$TEXT_SECONDARY;
+    background-color: #e7e5e4;
+    border-radius: 20px;
+    transform: translateY(-2px);
+
+    &:hover {
+      color: colors.$WHITE;
+      background-color: #2dd4bf;
+    }
+  }
+}
