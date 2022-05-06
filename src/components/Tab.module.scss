@@ -17,15 +17,16 @@
   padding: 10px 20px;
   font-weight: 500;
   color: colors.$TEXT_PRIMARY;
+  border-bottom: 2px solid #e7e5e4;
 }
 
-.temp {
+.seletedTab {
   color: colors.$TEXT_SECONDARY;
 }
 
 .bottomColor {
-  @include position.absolute(0 0 0 33%);
-  width: 33%;
+  @include position.absolute(0 0 0 33.3333%);
+  width: 33.3333%;
   border-bottom: 2px solid #2dd4bf;
   transition: 0.2s;
 }

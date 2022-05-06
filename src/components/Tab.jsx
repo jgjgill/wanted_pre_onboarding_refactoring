@@ -25,7 +25,7 @@ function Tab() {
             type='button'
             value={tabItem}
             onClick={handleClickTab}
-            className={cx(styles.tab, {temp: tabItem === selectedTab})}
+            className={cx(styles.tab, {seletedTab: tabItem === selectedTab})}
             >
             {tabItem}
           </button>
