@@ -12,6 +12,7 @@ function Slider() {
   const handleChangeInput = (e) => {
     setSlider(e.currentTarget.value)
   }
+  console.log(slider)
   
   const handleChangeSlider = (e) => {
     setSlider(e.currentTarget.value)
@@ -32,7 +33,7 @@ function Slider() {
         </div>
 
         <div className={styles.sliderRangeWrapper}>
-          <input type='range' list='slider' min='1' max='100' value={slider} onChange={handleChangeSlider} className={styles.sliderRange}/>    
+          <input type='range' list='slider' min='1' max='100' value={slider} onChange={handleChangeSlider} className={cx('sliderRange', {baseBackgrounRange: !(slider >= 1) })}/>    
           <div className={styles.sliderBackground} style={{'--slider': `${slider}%`}} />
           <div className={styles.circleContainer}>
             {SLIDER_GROUP.map((item) => (
