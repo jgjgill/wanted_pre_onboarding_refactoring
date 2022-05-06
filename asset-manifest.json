@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wanted_pre_onboarding_refactoring/static/css/main.8df93f2b.css",
-    "main.js": "/wanted_pre_onboarding_refactoring/static/js/main.21f88f3f.js",
+    "main.css": "/wanted_pre_onboarding_refactoring/static/css/main.87db85d2.css",
+    "main.js": "/wanted_pre_onboarding_refactoring/static/js/main.80a51774.js",
     "static/js/787.364214df.chunk.js": "/wanted_pre_onboarding_refactoring/static/js/787.364214df.chunk.js",
     "static/media/logo.svg": "/wanted_pre_onboarding_refactoring/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/wanted_pre_onboarding_refactoring/index.html",
@@ -10,12 +10,12 @@
     "static/media/checkCircle.svg": "/wanted_pre_onboarding_refactoring/static/media/checkCircle.4d4aad123a1d6e1a76cb83761a97f577.svg",
     "static/media/chevronDown.svg": "/wanted_pre_onboarding_refactoring/static/media/chevronDown.544ba696a77463059c4c965b64f28eb9.svg",
     "static/media/search.svg": "/wanted_pre_onboarding_refactoring/static/media/search.eecb80b433e4d5155a21bd5fd97f8497.svg",
-    "main.8df93f2b.css.map": "/wanted_pre_onboarding_refactoring/static/css/main.8df93f2b.css.map",
-    "main.21f88f3f.js.map": "/wanted_pre_onboarding_refactoring/static/js/main.21f88f3f.js.map",
+    "main.87db85d2.css.map": "/wanted_pre_onboarding_refactoring/static/css/main.87db85d2.css.map",
+    "main.80a51774.js.map": "/wanted_pre_onboarding_refactoring/static/js/main.80a51774.js.map",
     "787.364214df.chunk.js.map": "/wanted_pre_onboarding_refactoring/static/js/787.364214df.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8df93f2b.css",
-    "static/js/main.21f88f3f.js"
+    "static/css/main.87db85d2.css",
+    "static/js/main.80a51774.js"
   ]
 }
